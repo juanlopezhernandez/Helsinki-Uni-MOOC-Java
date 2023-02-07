@@ -20,6 +20,7 @@ public class Items {
         for(Item nombres:items){
             System.out.println(nombres);
         }
+        //name not given to "new" item but parameter is taken as the "reference
         System.out.println(items.get(1));
 
     }
