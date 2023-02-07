@@ -6,9 +6,8 @@ public class Items {
 
     public static void main(String[] args) {
         // implement here your program that uses the class Item
-
-        ArrayList<Item> items = new ArrayList<>();       
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Item> items = new ArrayList<>();               
         
         while (true){
             System.out.println("Name: ");
@@ -21,6 +20,7 @@ public class Items {
         for(Item nombres:items){
             System.out.println(nombres);
         }
+        System.out.println(items.get(1));
 
     }
 }
