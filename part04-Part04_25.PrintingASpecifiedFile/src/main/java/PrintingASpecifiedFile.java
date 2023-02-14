@@ -10,13 +10,14 @@ public class PrintingASpecifiedFile {
         String fileName = scanner.nextLine();
         
         try(Scanner fileScanner = new Scanner(Paths.get(fileName))){
+            
             while (fileScanner.hasNextLine()){
                 String fileContent = fileScanner.nextLine();
                 System.out.println(fileContent);
             }
-        } catch (Exception e){
-            //System.out.println(e + "does not exist.");
+            
+        } catch (Exception e) {
+            System.out.println(e + "does not exist.");
         }
-
     }
 }
