@@ -14,9 +14,9 @@ public class GuestListFromAFile {
         ArrayList<String> list = new ArrayList<>();
         // implement reading the file here.
         try(Scanner fileScan = new Scanner (Paths.get(file))){
-           while (fileScan.hasNextLine()) {
-                        
+           while (fileScan.hasNextLine()) {                        
             list.add(fileScan.nextLine());
+            
             } 
         } catch (Exception e) {
             
