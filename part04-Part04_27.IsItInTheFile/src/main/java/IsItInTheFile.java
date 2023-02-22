@@ -26,8 +26,10 @@ public class IsItInTheFile {
                 for (i = 0;i <list.size();i++){
                     if(list.contains(searchedFor)){
                     System.out.println("Found!");
+                    break;
                     } else {
                         System.out.println("Not found.");
+                        break;
                 }
                 }  
  
