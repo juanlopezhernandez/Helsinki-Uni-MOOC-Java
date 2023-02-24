@@ -1,7 +1,9 @@
 
+import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class StoringRecords {
 
@@ -22,9 +24,23 @@ public class StoringRecords {
 
     public static ArrayList<Person> readRecordsFromFile(String file) {
         ArrayList<Person> persons = new ArrayList<>();
-
         // Write here the code for reading from file
         // and printing the read records
+        try(Scanner requestedFile = new Scanner(Paths.get(file))) {
+            while (requestedFile.hasNext()) {
+                String fileContent = requestedFile.nextLine();
+                
+                String[] partsFile = fileContent.split(",");
+                String name = partsFile[0];
+                int age = Integer.valueOf(partsFile[1]);
+                
+                persons.add(new Person(name,age));
+            }
+            
+        } catch (Exception e) {
+            
+        }
+        
         return persons;
 
     }
