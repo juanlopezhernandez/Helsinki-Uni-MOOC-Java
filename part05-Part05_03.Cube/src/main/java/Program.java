@@ -14,6 +14,5 @@ public class Program {
         System.out.println(userCube.volume());
         System.out.println(userCube);
 
-        // Experiment with your program here
     }
 }

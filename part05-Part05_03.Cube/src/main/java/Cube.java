@@ -18,7 +18,7 @@ public class Cube {
         return this.length*this.length*this.length;
     }
     public String toString(){
-        return "The length is "+ this.length + " and the volume " + volume();
+        return "The length of the edge is "+ this.length + " and the volume " + volume();
     }
     
 }
