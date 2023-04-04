@@ -4,11 +4,44 @@ public class SimpleDate {
     private int day;
     private int month;
     private int year;
+    
+    public SimpleDate afterNumberOfDays(int days){
+        SimpleDate newDate = new SimpleDate(this.day,this.month, this.year);
+        newDate.advance(days);
+        return newDate;
+    }
 
     public SimpleDate(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
+    }
+    
+    public void advance(){
+        this.day++;
+        if(this.day>30){
+            this.month++;
+            this.day=1;
+
+        }
+        if(this.month>12){
+            this.year++;
+            this.day = 1;
+            this.month = 1;
+        }       
+    }
+    
+    public void advance(int howManyDays){
+        this.day = this.day + howManyDays;
+        if(this.day>30){
+            this.month++;
+            this.day= this.day - 30;
+        }
+        if(this.month>12){
+            this.year++;
+            this.day = (this.day-30) + 30;
+            this.month = 1;
+        }        
     }
 
     @Override
