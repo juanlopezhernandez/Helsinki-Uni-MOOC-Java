@@ -28,7 +28,7 @@ public class Book {
         Book comparedBook = (Book) compared;
         
         if (this.name.equals(comparedBook.name) &&
-            this.publicationYear == comparedBook.getPublicationYear()){
+            this.publicationYear == comparedBook.publicationYear){
             return true;
         }
         return false;
