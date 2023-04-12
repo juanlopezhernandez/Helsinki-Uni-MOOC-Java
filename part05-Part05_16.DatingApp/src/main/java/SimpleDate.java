@@ -18,17 +18,7 @@ public class SimpleDate {
     }
     
     public void advance(){
-        this.day++;
-        if(this.day>30){
-            this.month++;
-            this.day=1;
-
-        }
-        if(this.month>12){
-            this.year++;
-            this.day = 1;
-            this.month = 1;
-        }       
+        advance(1);       
     }
     
     public void advance(int howManyDays){
