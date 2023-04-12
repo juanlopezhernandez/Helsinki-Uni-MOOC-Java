@@ -8,6 +8,9 @@ public class Menu {
     public Menu() {
         this.meals = new ArrayList<>();
     }
+    public void addMeal(String meal){
+        this.meals.add(meal);
+    }
 
     // implement the required methods here
 }
