@@ -3,17 +3,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         // Try out your class here
-        SimpleCollection c = new SimpleCollection("characters");
-        System.out.println("Pisin: " + c.longest());
+        SimpleCollection xmen = new SimpleCollection("characters");
+        System.out.println("Longest: " + xmen.longest());
         
-        c.add("magneto");
-        c.add("mystique");
-        c.add("phoenix");
+        xmen.add("magneto");
+        xmen.add("mystique");
+        xmen.add("phoenix");
         
-        System.out.println("Longest: " + c.longest());
-
-        
+        System.out.println("Longest: " + xmen.longest());
+        System.out.println("");
+        System.out.println(xmen.getElements());
     }
 }
