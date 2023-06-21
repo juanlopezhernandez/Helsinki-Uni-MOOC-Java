@@ -20,13 +20,13 @@ public class Hold {
             this.weightCurrentlyOnHold = this.weightCurrentlyOnHold + suitcase.totalWeight();
         }       
     }
-     public void printItems(){ 
+    
+    public void printItems(){ 
         System.out.println(this.cases);
        
         for (Suitcase caseEx : cases){                        
                 caseEx.printItems();                                
-            }
-        
+            }        
     }
     
     public String toString(){

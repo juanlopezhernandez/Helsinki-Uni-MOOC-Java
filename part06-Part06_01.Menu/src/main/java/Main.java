@@ -8,15 +8,14 @@ public class Main {
         
 
         elMenu.addMeal("Smoked salmon, white wine and butter sauce with basil");
-        
+        elMenu.clearMenu();        
         elMenu.addMeal("Seasonal green salad with apple-honey vinegarette");
         elMenu.addMeal("Roasted lamb in a red wine sauce");
         
         elMenu.printMeals();
         System.out.println("");
-        elMenu.clearMenu();
+
         elMenu.addMeal("Una Carnita Asada");        
-        elMenu.printMeals();
         
         System.out.println("");
         

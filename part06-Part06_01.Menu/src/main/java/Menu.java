@@ -16,9 +16,9 @@ public class Menu {
     
     }
     public void printMeals(){
-        for (int i = 0; i < meals.size(); i++){
-            System.out.println(this.meals.get(i));        
-            }
+        for (String comidas : meals){
+            System.out.println(comidas);
+        }
         //return "add meal";
    }    
    public void clearMenu (){
