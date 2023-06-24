@@ -6,7 +6,7 @@ import java.util.ArrayList;
  */
 public class Stack {
     
-    private ArrayList<String> contents;
+    private final ArrayList<String> contents;
     
     public Stack (){
         this.contents = new ArrayList<>();
