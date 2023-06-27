@@ -13,6 +13,7 @@ public class Package {
     public void addGift (Gift gift){
         this.gifts.add(gift);
     }
+    
     public void clearList(){
         this.gifts.clear();
     }

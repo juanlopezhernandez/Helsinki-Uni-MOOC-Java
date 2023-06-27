@@ -26,7 +26,7 @@ public class Gift {
     }
     
     public String toString(){
-        return this.getName() + " (" +this.getWeight()+" kg)";
+        return this.getName() + " (" + this.getWeight() + " kg)";
     }
     
 }
