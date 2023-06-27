@@ -13,11 +13,7 @@ public class Stack {
     }
     
     public boolean isEmpty(){
-        if (this.contents.isEmpty()){
-            return true;
-            } else {            
-            return false;             
-            }     
+        return this.contents.isEmpty();
     }
     
     public void add (String value){
