@@ -1,14 +1,7 @@
 
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author juanlopez
+ /* @author juanlopez
  */
 public class Room {
 
@@ -23,11 +16,7 @@ public class Room {
     }
 
     public boolean isEmpty() {
-        if (this.ocupantes.isEmpty()) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.ocupantes.isEmpty();
     }
 
     public Person shortest() {
@@ -41,27 +30,22 @@ public class Room {
                 compared = holder;
             }
         }
-
-        return compared;
+        return compared;        
     }
 
     public Person take() {
-
         if (this.ocupantes.isEmpty()) {
             return null;
         }
-
-        Person compared = ocupantes.get(0);
-
-        for (Person holder : this.ocupantes) {
-            if (compared.getHeight() > holder.getHeight()) {
-                compared = holder;
-            }
-        }
-        this.ocupantes.remove(compared);
-        return compared;
-
+        //used shortest() method to get the shortest person from the list and
+        //asigns it to variable taken
+        Person taken = this.shortest();
+        //taken variable is then removed from ocupantes
+        ocupantes.remove(taken);
+        //the person is that is removed is printed
+        return taken;        
     }
+    
     public void clear (){
         this.ocupantes.clear();
     }
