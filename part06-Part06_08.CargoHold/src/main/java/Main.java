@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(mochila);
         System.out.println("");
-        System.out.println(mochila.totalWeight());
+        System.out.println("Total weight is: " + mochila.totalWeight());
         mochila.printItems();
         System.out.println("");
         System.out.println(mochila.heaviestItem());
