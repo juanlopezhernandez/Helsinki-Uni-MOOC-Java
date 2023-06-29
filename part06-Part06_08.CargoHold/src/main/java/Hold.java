@@ -31,7 +31,18 @@ public class Hold {
     }
 
     public String toString() {
-        return this.cases.size() + " suitcases (" + this.weightCurrentlyOnHold + "kg)";
+        String common = this.cases.size() + " ";
+
+        if (cases.isEmpty()) {
+            return "Nothing on hold";
+        }
+
+        if (cases.size() == 1) {
+            return common + "suitcase (" + this.weightCurrentlyOnHold + "kg)";
+        } else {
+            return common + "suitcases (" + this.weightCurrentlyOnHold + "kg)";
+        }
+
     }
 
 }
