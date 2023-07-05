@@ -24,7 +24,7 @@ public class Hold {
 
     public void printItems() {
         System.out.println(this.cases);
-
+        
         for (Suitcase caseEx : cases) {
             caseEx.printItems();
         }
