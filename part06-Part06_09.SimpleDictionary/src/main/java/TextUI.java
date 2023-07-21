@@ -19,26 +19,26 @@ public class TextUI {
         this.scanned = scan;
         this.objects = object;
     }
-
+ 
     public void start() {
-
         while (true) {
             System.out.println("Command:");
-            String word = scanned.nextLine();
+            String userWord = scanned.nextLine();
 
-            if (word.contains("end")) {
+            if (end(userWord)) {
                 System.out.println("Bye bye!");
                 break;
             }
-            if (word.contains("add")) {
-                System.out.println("Word:");
-                String i = scanned.nextLine();
-                System.out.println("Transtalion:");
-                String y = scanned.nextLine();
-                this.objects.add(i, y);
+            if (userWord.contains("add")) {
+                System.out.print("Word: ");
+                String word = scanned.nextLine();
+                System.out.print("Transtalion: ");
+                String translation = scanned.nextLine();
+                this.objects.add(word, translation);
                 continue;
             }
-            if (word.contains("search")) {
+
+            if (userWord.contains("search")) {
                 //i think there needs to be another if statement here
                 System.out.println("To be translated:");
                 String x = scanned.nextLine();
@@ -49,10 +49,19 @@ public class TextUI {
                     continue;
                 }
             }
-            if (word.contains(word)) {
+            if (userWord.contains(userWord)) {
                 System.out.println("Unknown command");
             }
-
         }
     }
+
+    public boolean end(String palabra) {
+        if (palabra.equals("end")) {
+            return true;
+        }
+        return false;
+    }
+
+   
+
 }
