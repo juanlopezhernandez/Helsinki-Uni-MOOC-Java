@@ -14,13 +14,40 @@ import java.util.Scanner;
  */
 public class UserInterface {
     private Scanner scanner;
+    private TodoList list;
     
     public UserInterface(TodoList list, Scanner scanner){
        this.scanner = scanner;
-       
-        
+       this.list = list;
     }
     public void start(){
+                 System.out.println("Command:");
         
+        while (true){
+
+        String command = scanner.next();   
+            
+            
+            if (command.equals("stop")){
+                break;
+            }
+            if (command.equals("add")){
+                System.out.println("Task:");
+                String task = scanner.nextLine();
+                this.list.add(task);
+                continue;               
+            }
+            if (command.equals("completed")){
+                System.out.println("Which task was completed?");
+                int taskIndex = scanner.nextInt();
+                this.list.remove(taskIndex);
+                System.out.println(list.listContent());
+                continue;
+            }
+            if (command.equals("list")){                
+                System.out.println(list.index()+": "+list.listContent());
+            }
+        }
+                
     }
 }
