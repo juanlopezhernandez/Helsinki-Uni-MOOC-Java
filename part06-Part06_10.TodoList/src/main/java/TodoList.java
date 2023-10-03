@@ -2,17 +2,10 @@
 import java.util.ArrayList;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
  * @author juanlopez
  */
 public class TodoList {
-    private ArrayList list;
+    private ArrayList<String> list;
     
     public TodoList(){
         this.list = new ArrayList <>();
@@ -26,11 +19,17 @@ public class TodoList {
         this.list.remove(number);
     }
     
-    public ArrayList listContent (){
-       
-
-        return this.list;
+    public void listContent (){
+        int number = 1;
+        for (String content: list){
+            System.out.println(number + ": " + content);
+            number++;
+            
+        }
+    
+      // return "";
     }
+    
     public int index (){
         int index = 0;
         for (int i=1;i<list.size();i++){

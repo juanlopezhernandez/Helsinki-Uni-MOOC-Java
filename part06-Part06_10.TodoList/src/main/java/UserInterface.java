@@ -2,15 +2,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author juanlopez
+ /* @author juanlopez
  */
 public class UserInterface {
     private Scanner scanner;
@@ -21,20 +13,21 @@ public class UserInterface {
        this.list = list;
     }
     public void start(){
-                 System.out.println("Command:");
-        
+                       
         while (true){
-
-        String command = scanner.next();   
-            
-            
-            if (command.equals("stop")){
+            System.out.println("Command:"); 
+            String command = scanner.next();
+                        
+            if (stopCommand(command)){
                 break;
             }
+//            if (addCommand(command)){
+//                
+//            }
             if (command.equals("add")){
                 System.out.println("Task:");
-                String task = scanner.nextLine();
-                this.list.add(task);
+                //String task = scanner.nextLine();
+                this.list.add(scanner.next());
                 continue;               
             }
             if (command.equals("completed")){
@@ -44,10 +37,24 @@ public class UserInterface {
                 System.out.println(list.listContent());
                 continue;
             }
-            if (command.equals("list")){                
-                System.out.println(list.index()+": "+list.listContent());
-            }
-        }
+            if (command.equals("list")){
                 
+                System.out.println(list.listContent());
+                continue;
+            }
+        }                
     }
-}
+    
+    public boolean stopCommand(String command){
+            if (command.equals("stop")){
+                return true;                
+            }
+            return false;
+        }
+//    public boolean addCommand (String command){
+//        if (command.equals("add")){
+//            System.out.println("Task:");
+//            this.list.add(scanner.next());
+//        }
+    }
+       
