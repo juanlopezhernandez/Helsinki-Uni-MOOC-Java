@@ -16,18 +16,18 @@ public class TodoList {
     }
     
     public void remove (int number){
-        this.list.remove(number);
+        this.list.remove(number-1);
     }
     
-    public void listContent (){
+    public void print(){
         int number = 1;
         for (String content: list){
+            if(content.isEmpty()){
+                break;
+            }
             System.out.println(number + ": " + content);
-            number++;
-            
-        }
-    
-      // return "";
+            number++;           
+        }    
     }
     
     public int index (){

@@ -16,7 +16,7 @@ public class UserInterface {
                        
         while (true){
             System.out.println("Command:"); 
-            String command = scanner.next();
+            String command = scanner.nextLine();
                         
             if (stopCommand(command)){
                 break;
@@ -25,21 +25,26 @@ public class UserInterface {
 //                
 //            }
             if (command.equals("add")){
-                System.out.println("Task:");
-                //String task = scanner.nextLine();
-                this.list.add(scanner.next());
+                System.out.println("To add:");
+                String task = scanner.nextLine();
+                
+                this.list.add(task);
                 continue;               
             }
-            if (command.equals("completed")){
-                System.out.println("Which task was completed?");
+            //
+            //this.list.add(task);
+            
+            
+            
+            if (command.equals("remove")){
+                System.out.println("Which one is removed?");
                 int taskIndex = scanner.nextInt();
                 this.list.remove(taskIndex);
-                System.out.println(list.listContent());
+               // System.out.println(list.print());
                 continue;
             }
             if (command.equals("list")){
-                
-                System.out.println(list.listContent());
+               list.print();
                 continue;
             }
         }                
