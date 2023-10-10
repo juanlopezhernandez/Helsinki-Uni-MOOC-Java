@@ -21,26 +21,28 @@ public class UserInterface {
             if (stopCommand(command)){
                 break;
             }
-//            if (addCommand(command)){
+
+//            if (command.equals("add")){
+//                System.out.println("To add:");
+//                String task = scanner.nextLine();
 //                
+//                this.list.add(task);
+//                continue;               
 //            }
             if (command.equals("add")){
-                System.out.println("To add:");
-                String task = scanner.nextLine();
-                
-                this.list.add(task);
-                continue;               
+                addCommand();
+                continue;
             }
-            //
-            //this.list.add(task);
             
             
-            
-            if (command.equals("remove")){
-                System.out.println("Which one is removed?");
-                int taskIndex = scanner.nextInt();
-                this.list.remove(taskIndex);
+           //  if (command.equals("remove")){
+//                System.out.println("Which one is removed?");
+//                int taskIndex = scanner.nextInt();
+//                this.list.remove(taskIndex);
                // System.out.println(list.print());
+                //continue;
+            if (command.equals("remove")){
+                removeCommand();
                 continue;
             }
             if (command.equals("list")){
@@ -56,10 +58,18 @@ public class UserInterface {
             }
             return false;
         }
-//    public boolean addCommand (String command){
-//        if (command.equals("add")){
-//            System.out.println("Task:");
-//            this.list.add(scanner.next());
-//        }
+    public void addCommand (){
+            
+            System.out.println("To add:");
+            String task = scanner.nextLine();
+            this.list.add(task);
+                       
+    }
+    public void removeCommand(){
+        System.out.println("Which one is to be removed?");
+        int taskIndex = scanner.nextInt();
+        this.list.remove(taskIndex);
+        
+    }
     }
        
