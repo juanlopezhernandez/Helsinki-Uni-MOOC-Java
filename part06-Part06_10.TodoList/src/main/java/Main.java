@@ -11,8 +11,8 @@ public class Main {
 
         UserInterface ui = new UserInterface(list, scanner);
         ui.start();
-        
-        System.out.println("Tasks to be completed: ");
+
+        System.out.println("Pending tasks:");
         list.print();
 
     }
