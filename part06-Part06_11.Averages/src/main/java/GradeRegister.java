@@ -23,12 +23,10 @@ public class GradeRegister {
                 count++;
             }
         }
-
         return count;
     }
 
     public static int pointsToGrade(int points) {
-
         int grade = 0;
         if (points < 50) {
             grade = 0;
@@ -43,7 +41,6 @@ public class GradeRegister {
         } else {
             grade = 5;
         }
-
         return grade;
     }
     
@@ -52,14 +49,11 @@ public class GradeRegister {
         int totalAmount = 0;
         if (this.grades.isEmpty()) {
                 return -1.0;                
-            }
+        }
         for (int hold : this.grades) {
-             
-            
             totalAmount += hold;
             count++;
-        }
-        
+        }        
         return totalAmount/count;
     }
 
@@ -74,6 +68,6 @@ public class GradeRegister {
             count++;
         }
         return totalAmount / count;
-
     }
+    
 }

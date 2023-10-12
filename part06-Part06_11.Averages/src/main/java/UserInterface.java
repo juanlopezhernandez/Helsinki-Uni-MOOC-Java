@@ -49,7 +49,6 @@ public class UserInterface {
 
             grade = grade - 1;
         }
-
     }
 
     public static void printsStars(int stars) {
