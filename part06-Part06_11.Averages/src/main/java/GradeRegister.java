@@ -8,10 +8,12 @@ public class GradeRegister {
 
     public GradeRegister() {
         this.grades = new ArrayList<>();
+        this.points = new ArrayList<>();
     }
 
     public void addGradeBasedOnPoints(int points) {
         this.grades.add(pointsToGrade(points));
+        this.points.add(points);
     }
 
     public int numberOfGrades(int grade) {
@@ -48,10 +50,11 @@ public class GradeRegister {
     public double averageOfGrades() {
         double count = 0;
         int totalAmount = 0;
-        for (double hold : this.grades) {
-            if (this.grades.isEmpty()) {
-                return -1.0;
-            } 
+        if (this.grades.isEmpty()) {
+                return -1.0;                
+            }
+        for (int hold : this.grades) {
+             
             
             totalAmount += hold;
             count++;
@@ -60,13 +63,17 @@ public class GradeRegister {
         return totalAmount/count;
     }
 
-    public double averageOfPoints(){
-        int totalAmout = 0;
-        
-        if(grades.isEmpty()){
-        return -1.0;
+    public double averageOfPoints() {
+        double count = 0;
+        int totalAmount = 0;
+        if (this.points.isEmpty()) {
+            return -1.0;
         }
-        return 0;
-            
+        for (int hold : this.points) {
+            totalAmount += hold;
+            count++;
+        }
+        return totalAmount / count;
+
     }
 }
