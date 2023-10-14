@@ -16,49 +16,13 @@ public class Program {
         manager.addJoke("Mejor futbolista? - Cristiano");
         manager.addJoke("Mejor equipo? - Real Madrid");
         manager.addJoke("Mejor artista? - Bad Bunny");
+        manager.addJoke("Y el recibo? - Esta!");
 
-        manager.printJokes();
-        
-        manager.drawJoke();
+       
+        String randomJoke = manager.drawJoke();
+        System.out.println("");
+        System.out.println(randomJoke);
         //ui.start();
-//        Random draw = new Random();
-//        int randomIndex = draw.nextInt(10);
-//        System.out.println(randomIndex);
-        
-        
-        
-        
-//        ArrayList<String> jokes = new ArrayList<>();
-//        System.out.println("What a joke!");
-//        while (true) {
-//        System.out.println("Commands:");
-//        System.out.println(" 1 - add a joke");
-//        System.out.println(" 2 - draw a joke");
-//        System.out.println(" 3 - list jokes");
-//        System.out.println(" X - stop");
-//        String command = scanner.nextLine();
-//        if (command.equals("X")) {
-//        break;
-//        }
-//        if (command.equals("1")) {
-//        System.out.println("Write the joke to be added:");
-//        String joke = scanner.nextLine();
-//        jokes.add(joke);
-//        } else if (command.equals("2")) {
-//        System.out.println("Drawing a joke.");
-//        if (jokes.isEmpty()) {
-//        System.out.println("Jokes are in short supply.");
-//        } else {
-//        Random draw = new Random();
-//        int index = rand.nextInt(jokes.size());
-//        System.out.println(jokes.get(index));
-//        }
-//        } else if (command.equals("3")) {
-//        System.out.println("Printing the jokes.");
-//        for (String joke : jokes) {
-//        System.out.println(joke);
-//        }
-//        }
-//        }
+ manager.printJokes();
     }
 }

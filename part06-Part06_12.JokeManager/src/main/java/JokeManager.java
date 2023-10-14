@@ -25,13 +25,13 @@ public class JokeManager {
     
     public String drawJoke(){
         if(this.jokeList.isEmpty()){
-            //System.out.println("empty");
+           
             return "Jokes are in short supply.";
         } 
         Random draw = new Random();
         int randomIndex = draw.nextInt(jokeList.size());       
         String hold = this.jokeList.get(randomIndex);
-        System.out.println(hold);
+        //System.out.println(hold);
         return hold;
                 
     }

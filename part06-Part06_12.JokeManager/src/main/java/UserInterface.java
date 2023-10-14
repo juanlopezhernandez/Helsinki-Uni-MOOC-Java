@@ -37,8 +37,10 @@ public class UserInterface {
             }
             
             if (commandIn.equals("2")){
-                manager.drawJoke();
                 
+                String randJoke = manager.drawJoke();
+                System.out.println(randJoke);
+                //the drawJoke() has to be captured here too!!!!
             }
             
             if (commandIn.equals("3")){
