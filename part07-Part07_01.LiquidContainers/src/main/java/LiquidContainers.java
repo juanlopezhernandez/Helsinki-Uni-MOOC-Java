@@ -46,8 +46,21 @@ public class LiquidContainers {
                 //if amount is greater than first and first plus second is less than 100
                 //add first to second and first set to 0;
                 //else 
+//                if(amount>first){
+//                    if ((first + second)<=100){
+//                    second += first;
+//                    first =0;
+//                } else {
+//                        second += amount;
+//                        first -= amount;
+//                    }
+//                }
+                
+                
                 
                 if (amount > first && ((first + second) <= 100)){
+                   // if(second)
+                    
                     second += first;
                     first = 0;
                 }else {
@@ -55,7 +68,7 @@ public class LiquidContainers {
                     first -= amount;
                 }
                 
-                if ((amount + second) >=100){                   
+                if (second > 100){                   
                         second = 100;
                        
                     }
