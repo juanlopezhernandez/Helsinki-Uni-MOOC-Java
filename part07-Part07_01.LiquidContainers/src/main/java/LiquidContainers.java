@@ -7,7 +7,7 @@ public class LiquidContainers {
         Scanner scan = new Scanner(System.in);
         
         int first = 0;
-        int second = 5;
+        int second = 0;
                 
 
 
@@ -16,6 +16,9 @@ public class LiquidContainers {
             System.out.println("Second: " + second + "/100");
             //takes in the user input that would take the user input
             String input = scan.nextLine();
+            //break has to be set right after t he input has been recieved to avoid
+            //outOfBounds Exceptions, if the break is set after the SPLITing of input
+            //it will expect a an array at [1].
             if (input.equals("quit")) {
                 break;
             }            
@@ -26,14 +29,48 @@ public class LiquidContainers {
             int amount = Integer.valueOf(parts[1]);
                         
             if (command.equals("add")){
-                if((amount + first)<=100){
+                if (amount < 0){
+                    continue;
+                }
+                if((amount + first) <= 100){
                     first += amount;   
                 } else {
                     first = 100;
                 }
             }
                 
+            if (command.equals("move")){
+                if (amount < 0){
+                    continue;
+                }
+                //if amount is greater than first and first plus second is less than 100
+                //add first to second and first set to 0;
+                //else 
+                
+                if (amount > first && ((first + second) <= 100)){
+                    second += first;
+                    first = 0;
+                }else {
+                    second += amount;
+                    first -= amount;
+                }
+                
+                if ((amount + second) >=100){                   
+                        second = 100;
+                       
+                    }
+            }
+            
+            if (command.equals("remove")){
+                
+                if(amount > second){
+                    second = 0;
+                } else {
+                second -= amount;                
+                }
 
+                
+            }
 
         }
         
