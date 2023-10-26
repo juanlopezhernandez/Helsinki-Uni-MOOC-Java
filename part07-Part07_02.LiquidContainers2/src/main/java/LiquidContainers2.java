@@ -9,6 +9,8 @@ public class LiquidContainers2 {
         Container contenedor = new Container();
         
         contenedor.add(50);
+        contenedor.add(-5);
+        contenedor.remove (-60);
         System.out.println(contenedor);
         System.out.println(contenedor.contains());
 
