@@ -7,6 +7,8 @@ public class LiquidContainers2 {
         Scanner scan = new Scanner(System.in);
         
         Container contenedor = new Container();
+        UserInterface ui = new UserInterface();
+        ui.start();
         
         contenedor.add(50);
         contenedor.add(-5);
