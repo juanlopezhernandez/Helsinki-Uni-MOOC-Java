@@ -11,10 +11,10 @@ public class LiquidContainers2 {
         ui.start();
         
         contenedor.add(50);
-        contenedor.add(-5);
-        contenedor.remove (-60);
+        //contenedor.add(-5);
+        //contenedor.remove (-60);
         System.out.println(contenedor);
-        System.out.println(contenedor.contains());
+        //System.out.println(contenedor.contains());
 
 
 //        while (true) {

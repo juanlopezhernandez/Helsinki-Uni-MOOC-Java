@@ -38,9 +38,12 @@ public class Container {
             this.container =0;
         }
     }
+    public void setTo(int amount){
+        this.container=amount;
+    }
     
     public String toString(){
-        return contains()+"/100";
+        return contains() + "/100";
     }
     
 }
