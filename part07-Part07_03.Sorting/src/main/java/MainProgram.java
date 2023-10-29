@@ -6,7 +6,7 @@ public class MainProgram {
 
     public static void main(String[] args) {
      //length=9 index= 0-8      0   1    2  3  4  5  6  7  8
-        int[] arrayOfNumbers = {3, -5, -19, 1, 7, 5, 3, 7, 5};
+        int[] arrayOfNumbers = {3, 7 , -19, 1, 7, 5, 3,-5 , 5};
         
 //        System.out.println("Smallest: " + MainProgram.smallest(arrayOfNumbers) );
 //        System.out.println("Index of the Smallest: " + MainProgram.indexOfSmallest(arrayOfNumbers));
@@ -70,20 +70,14 @@ public class MainProgram {
     public static void sort(int[] array){
         //go thro array, find the smallest, swap indexes from starting to where
         //smallest is, then start from one that index, print out list every time
-        MainProgram.indexOfSmallestFrom(array, 0);
-        int counter = 0;
-        while (counter<= array.length-1){
-            for(int i=0; i<array.length-1;i++){
+       // MainProgram.indexOfSmallestFrom(array, 0);
+       
+        for(int i=0; i<=array.length-1;i++){
                 int smallestindex = MainProgram.indexOfSmallestFrom(array, i);
-                MainProgram.swap(array, i ,smallestindex );
+                MainProgram.swap(array ,smallestindex,i );
                  System.out.println(Arrays.toString(array));
-                 counter++;
-            }
-        
-            
-            
-           
-        }
+                 //counter++;
+            }    
         
     }
 }
