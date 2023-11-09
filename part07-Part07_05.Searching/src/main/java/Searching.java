@@ -34,6 +34,8 @@ public class Searching {
         System.out.println("");
 
         System.out.println("");
+        Collections.sort(books, Comparator.comparing(Book::getId));
+
         System.out.println("Seaching with binary search:");
         start = System.currentTimeMillis();
         int binarySearchId = binarySearch(books, idToSearchFor);
@@ -58,7 +60,7 @@ public class Searching {
 
     public static int binarySearch(ArrayList<Book> books, long searchedId) {
         //sorts the arrayList provided, can still use the 'books'ArrayList type Book
-        Collections.sort(books, Comparator.comparing(Book::getId));
+        //Collections.sort(books, Comparator.comparing(Book::getId));
         
         int start = 0;
         int end = books.size()-1;
