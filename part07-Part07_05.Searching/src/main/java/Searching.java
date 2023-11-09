@@ -63,22 +63,18 @@ public class Searching {
         int start = 0;
         int end = books.size()-1;
         
-        for (int i = start; i <books.size()-1; i++){
-           while (start < end){
-            int middle = (start - end) /2;
-           
-            if (books.get(middle).getId()== searchedId){
+        while (start <= end) {
+            int middle = (end + start) / 2;
+
+            if (books.get(middle).getId() == searchedId) {
                 return middle;
-            }
-            if (books.get(middle).getId()< searchedId){
-                start = middle +1;
-            }
-            
-            if (books.get(middle).getId() > searchedId){
-                end = middle +1;
+            } else if (books.get(middle).getId() < searchedId) {
+                start = middle + 1;
+            } else {
+                end = middle - 1;
             }
         }
-        }
+
         return -1;
     }
 }
