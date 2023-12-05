@@ -12,36 +12,50 @@ import java.util.ArrayList;
  * @author juanlopez
  */
 public class Program {
-     private ArrayList numbers;
+     private ArrayList<Integer> numbers;
      private int amount;
-     private int amountPassing;
+     private int entries;
      
      public Program(){
          this.numbers = new ArrayList<>();
          this.amount = 0;
      }
       public void add (int number) {
-        this.numbers.add(number);
-        this.amount++;
-        if (number>60){
-            this.amountPassing++;
+          
+        if (number>=0 &&number<=100){
+            this.numbers.add(number);
+            this.entries++;
+            amount += number;
         }
     }
+      
     public int average (){
-        int total = 0;
-        
-        
-        //need code, go one by one through list, a
-        
-        return total/this.amount;
+        //int total = 0;               
+        //need code, go one by one through list, a        
+        return this.amount/this.entries;
     }
     public int averagePassing (){
-        int total=0;
+        int totalPassing = 0;
+        int entriesPassing = 0;
+        if (entriesPassing == 0){
+            zero();
+        }
+        for (int hold :this.numbers){
+            if (hold >= 50){
+                totalPassing += hold;
+                entriesPassing++;
+            }
+        }
         
-        return total/this.amountPassing;
+
+        return totalPassing/entriesPassing;
+        
+    }
+    public String zero (){
+        return "-";
     }
     public int passingPercentage(){
-        return (this.amountPassing/this.amount)*100;
+        return (this.entries/this.amount)*100;
     }
     
    

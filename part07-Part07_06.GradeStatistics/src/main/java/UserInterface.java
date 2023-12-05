@@ -33,6 +33,7 @@ public class UserInterface {
             this.points.add(pointInput);
             
        }
+        
         System.out.println("Point average(all): " + this.points.average());
         System.out.println("Point average(passing): " + this.points.averagePassing());
         System.out.println("Pass percentage: " + this.points.passingPercentage());
