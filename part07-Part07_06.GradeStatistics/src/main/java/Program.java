@@ -6,58 +6,82 @@ import java.util.ArrayList;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author juanlopez
  */
 public class Program {
-     private ArrayList<Integer> numbers;
-     private int amount;
-     private int entries;
-     
-     public Program(){
-         this.numbers = new ArrayList<>();
-         this.amount = 0;
-     }
-      public void add (int number) {
-          
-        if (number>=0 &&number<=100){
-            this.numbers.add(number);
+
+    private ArrayList<Integer> numbersList;
+    private int addedValueOfNumbers;
+    private int entries;
+
+    public Program() {
+        this.numbersList = new ArrayList<>();
+        this.addedValueOfNumbers = 0;
+        this.entries = 0;
+    }
+
+    public void add(int number) {
+
+        if (number > 0 && number <= 100) {
+            this.numbersList.add(number);
             this.entries++;
-            amount += number;
+            addedValueOfNumbers += number;
         }
     }
-      
-    public int average (){
+
+    public double average() {
         //int total = 0;               
         //need code, go one by one through list, a        
-        return this.amount/this.entries;
+        return this.addedValueOfNumbers / this.entries;
     }
-    public int averagePassing (){
+
+    public double averagePassing() {
         int totalPassing = 0;
         int entriesPassing = 0;
-        if (entriesPassing == 0){
-            zero();
-        }
-        for (int hold :this.numbers){
-            if (hold >= 50){
+
+        for (int hold : this.numbersList) {
+            if (hold >= 50) {
                 totalPassing += hold;
                 entriesPassing++;
             }
         }
-        
 
-        return totalPassing/entriesPassing;
-        
+        return totalPassing / entriesPassing;
+
     }
-    public String zero (){
+
+    //review
+    public String zero() {
         return "-";
     }
-    public int passingPercentage(){
-        return (this.entries/this.amount)*100;
+
+    public double passingPercentage() {
+        double totalPassing = 0;
+        double entriesPassing = 0;
+
+        for (int hold : this.numbersList) {
+            entriesPassing++;
+            if (hold >= 50) {
+                totalPassing++;
+
+            }
+        }
+
+        return 100 * totalPassing / entriesPassing;
+
     }
-    
-   
-      
+    //stars
+    public String distro (){
+        
+        for ( int hold : this.numbersList){
+            if(hold < 50){
+                return "0: ";
+            }
+        }
+        
+        return "";
+    }
+
 }
