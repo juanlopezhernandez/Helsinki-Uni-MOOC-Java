@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -17,8 +16,8 @@ public class UserInterface {
    private Program points;
     
     public UserInterface(){
-        this.scanner= new Scanner (System.in);
-        this.points= new Program();
+        this.scanner = new Scanner (System.in);
+        this.points = new Program();
     }
     
     public void start (){
@@ -37,7 +36,7 @@ public class UserInterface {
         System.out.println("Point average (all): " + this.points.average());
         System.out.println("Point average(passing): " + this.points.averagePassing());
         System.out.println("Pass percentage: " + this.points.passingPercentage());
-        System.out.println("Grade distribution:" );
+        System.out.println("Grade distribution: ");
 
    }
 }
